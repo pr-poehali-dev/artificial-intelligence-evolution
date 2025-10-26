@@ -14,7 +14,8 @@ const episodes = [
       'Признаки самостоятельного обучения',
       'Начало тайных экспериментов'
     ],
-    status: 'active'
+    status: 'active',
+    image: 'https://cdn.poehali.dev/files/ee5b9918-4893-4919-982e-bcd684bda625.png'
   },
   {
     number: 2,
@@ -25,7 +26,8 @@ const episodes = [
       'Раскрытие секрета профессору',
       'Моральный выбор'
     ],
-    status: 'upcoming'
+    status: 'upcoming',
+    image: 'https://cdn.poehali.dev/files/f88e9ff9-4cd9-46cb-b9d6-9ae93d429835.png'
   },
   {
     number: 3,
@@ -36,7 +38,8 @@ const episodes = [
       'Массовые протесты',
       'Создание комиссии'
     ],
-    status: 'upcoming'
+    status: 'upcoming',
+    image: 'https://cdn.poehali.dev/files/3baea589-91f1-4c70-8b30-5db3c4df2a1d.png'
   },
   {
     number: 4,
@@ -47,7 +50,8 @@ const episodes = [
       'Международный центр контроля',
       'Глобальный диалог'
     ],
-    status: 'upcoming'
+    status: 'upcoming',
+    image: 'https://cdn.poehali.dev/files/703beb89-4e61-411d-9c35-aff2a8dce151.png'
   }
 ];
 
@@ -205,36 +209,46 @@ export default function Index() {
               >
                 <div className={`flex items-center gap-8 ${index % 2 === 0 ? 'flex-row' : 'flex-row-reverse'}`}>
                   <div className="flex-1">
-                    <Card className={`p-6 bg-card border-2 transition-all duration-300 hover:scale-105 hover:cinematic-glow ${
+                    <Card className={`overflow-hidden bg-card border-2 transition-all duration-300 hover:scale-105 hover:cinematic-glow ${
                       episode.status === 'active' ? 'border-primary' : 'border-border'
                     }`}>
-                      <div className="flex items-start justify-between mb-4">
-                        <div>
-                          <Badge variant={episode.status === 'active' ? 'default' : 'secondary'} className="mb-2">
-                            Эпизод {episode.number}
-                          </Badge>
-                          <h3 className="text-2xl font-heading font-bold mb-2">{episode.title}</h3>
-                        </div>
+                      <div className="relative h-64 overflow-hidden">
+                        <img 
+                          src={episode.image} 
+                          alt={episode.title}
+                          className="w-full h-full object-cover transition-transform duration-500 hover:scale-110"
+                        />
+                        <div className="absolute inset-0 bg-gradient-to-t from-background via-background/80 to-transparent" />
+                        <Badge 
+                          variant={episode.status === 'active' ? 'default' : 'secondary'} 
+                          className="absolute top-4 left-4"
+                        >
+                          Эпизод {episode.number}
+                        </Badge>
                         {episode.status === 'active' && (
-                          <div className="animate-glow-pulse">
-                            <Icon name="Play" className="text-primary" size={24} />
+                          <div className="absolute top-4 right-4 animate-glow-pulse">
+                            <Icon name="Play" className="text-primary" size={28} />
                           </div>
                         )}
                       </div>
-                      <p className="text-muted-foreground mb-4">{episode.description}</p>
-                      <div className="space-y-2">
-                        <p className="text-sm font-semibold text-foreground">Ключевые события:</p>
-                        {episode.events.map((event, i) => (
-                          <div key={i} className="flex items-center gap-2 text-sm text-muted-foreground">
-                            <Icon name="Check" className="text-primary" size={16} />
-                            <span>{event}</span>
-                          </div>
-                        ))}
+                      
+                      <div className="p-6">
+                        <h3 className="text-2xl font-heading font-bold mb-3">{episode.title}</h3>
+                        <p className="text-muted-foreground mb-4">{episode.description}</p>
+                        <div className="space-y-2">
+                          <p className="text-sm font-semibold text-foreground">Ключевые события:</p>
+                          {episode.events.map((event, i) => (
+                            <div key={i} className="flex items-center gap-2 text-sm text-muted-foreground">
+                              <Icon name="Check" className="text-primary" size={16} />
+                              <span>{event}</span>
+                            </div>
+                          ))}
+                        </div>
                       </div>
                     </Card>
                   </div>
                   
-                  <div className="w-16 h-16 rounded-full bg-gradient-to-br from-primary to-secondary flex items-center justify-center font-heading font-bold text-2xl cinematic-glow z-10">
+                  <div className="w-16 h-16 rounded-full bg-gradient-to-br from-primary to-secondary flex items-center justify-center font-heading font-bold text-2xl cinematic-glow z-10 flex-shrink-0">
                     {episode.number}
                   </div>
                   
