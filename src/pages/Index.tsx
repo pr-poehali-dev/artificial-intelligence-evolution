@@ -84,7 +84,7 @@ const characters = [
     name: 'Мария',
     role: 'Активистка',
     description: 'Лидер движения против неконтролируемого развития ИИ',
-    image: 'https://cdn.poehali.dev/projects/a1559f03-3bbb-4fd5-9a19-8383c3e54a0b/files/1e4258bb-23fa-40a3-b590-c4ac8d344c8c.jpg'
+    image: 'https://cdn.poehali.dev/projects/a1559f03-3bbb-4fd5-9a19-8383c3e54a0b/files/8f24cf1b-8208-44e1-a445-290f7afe84b3.jpg'
   }
 ];
 
