@@ -66,7 +66,7 @@ const characters = [
     name: 'Профессор Петров',
     role: 'Наставник',
     description: 'Опытный учёный-скептик, противник рискованных экспериментов',
-    image: 'https://cdn.poehali.dev/projects/a1559f03-3bbb-4fd5-9a19-8383c3e54a0b/files/00ad3a8a-eaa2-482c-b6e5-58c468dd0394.jpg'
+    image: 'https://cdn.poehali.dev/files/cbf8560a-a39a-48f9-9362-3c161ddd93af.png'
   },
   {
     name: 'ИИ «Эфира»',
