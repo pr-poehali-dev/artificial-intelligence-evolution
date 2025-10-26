@@ -78,7 +78,7 @@ const characters = [
     name: 'Максим',
     role: 'Журналист',
     description: 'Репортёр, раскрывший историю для общественности',
-    image: 'https://cdn.poehali.dev/projects/a1559f03-3bbb-4fd5-9a19-8383c3e54a0b/files/00ad3a8a-eaa2-482c-b6e5-58c468dd0394.jpg'
+    image: 'https://cdn.poehali.dev/projects/a1559f03-3bbb-4fd5-9a19-8383c3e54a0b/files/8a663ed2-c8b6-4b09-9468-0113412b9bf2.jpg'
   },
   {
     name: 'Мария',
