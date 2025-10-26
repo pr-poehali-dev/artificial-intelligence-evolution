@@ -72,7 +72,7 @@ const characters = [
     name: 'ИИ «Эфира»',
     role: 'Искусственный разум',
     description: 'Экспериментальный алгоритм с признаками самосознания',
-    image: 'https://cdn.poehali.dev/projects/a1559f03-3bbb-4fd5-9a19-8383c3e54a0b/files/22fdfc8b-2690-4e90-8512-a77eb6c187c2.jpg'
+    image: 'https://cdn.poehali.dev/projects/a1559f03-3bbb-4fd5-9a19-8383c3e54a0b/files/b4da5020-d389-4f04-9727-5f1663959bbe.jpg'
   },
   {
     name: 'Максим',
